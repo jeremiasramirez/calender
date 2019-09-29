@@ -2,23 +2,70 @@ body{
   margin: 0;
   display: flex;
   justify-content: center;
-
 }
+
 .calender__container{
   display: flex;
-  padding: 0 2em;
+  padding: 0 2em 2em;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 400px;
-  border: 1px solid red;
+  width: 700px;
+
 }
 
-.calender__number{
+.container__title{
+  font-family: arial;
+  color: red;
+}
 
+.calender__days{
+  font-weight: 600;
+  font-family: sans-serif;
+  display: grid;
+  grid-auto-flow: column;
+  /* justify-content: space-around; */
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: 1px solid #ccc;
+  padding: .4em .3em;
+  box-shadow: 1px 1px 8px #ccc;
+  justify-items: center;
+}
+.calender__days__number{
+ color: #333;
+ margin-bottom: 1em;
+ font-weight: 600;
+ font-family: sans-serif;
+ border-radius: 50%;
+ color:red;
+ padding: .2em .5em;
+ transition: .3s;
+ border-radius: 5%;
+}
+.calender__days__number:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    transition: .4s;
+    color: darkred;
+    background: blue;
+    border-radius: 5%;
+    color:white;
+}
+.calender__days__days{
+  font-size: 1.5em;
+  border: 0;
+  padding: .1em .3em;
+   background-color: blue;
+  border-radius: 50%;
+  color: #eee;
+}
+.calender__number{
+    align-items: center;
+    justify-items: center;
     display: grid;
     grid-auto-flow: row;
     grid-template-rows: 30px 30px 30px 30px;
-    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
 
 }
