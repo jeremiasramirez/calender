@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+}
+.calender__container{
+  display: flex;
+  padding: 0 2em;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  border: 1px solid red;
+}
+
+.calender__number{
+
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 30px 30px 30px 30px;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px;
+
+}
