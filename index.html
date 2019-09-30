@@ -2,7 +2,7 @@
 <html lang="es" dir="ltr" ng-app>
   <head>
     <meta charset="utf-8">
-    <title>Calender</title>
+    <title>{{"Calender" | uppercase}}</title>
     <link rel="stylesheet" href="public/css/index.css">
   </head>
   <body>
@@ -13,18 +13,18 @@
 
       <!-- title of calender -->
         <div class="calender__container__title">
-            <h1 class="container__title">{{"September "}}<span class="title__year">{{2019}}</span></h1>
+            <h1 class="container__title">{{"September " | lowercase}}<span class="title__year">{{2019}}</span></h1>
         </div>
 <!-- name of day calender -->
         <section class="calender">
             <article class="calender__days">
-                <span class="calender__days__days">{{"D"}}</span>
-                <span class="calender__days__days">{{"L"}}</span>
-                <span class="calender__days__days">{{"M"}}</span>
-                <span class="calender__days__days">{{"M"}}</span>
-                <span class="calender__days__days">{{"J"}}</span>
-                <span class="calender__days__days">{{"V"}}</span>
-                <span class="calender__days__days">{{"S"}}</span>
+                <span class="calender__days__days">{{"d" | uppercase}}</span>
+                <span class="calender__days__days">{{"l" | uppercase}}</span>
+                <span class="calender__days__days">{{"m" | uppercase}}</span>
+                <span class="calender__days__days">{{"m" | uppercase}}</span>
+                <span class="calender__days__days">{{"j" | uppercase}}</span>
+                <span class="calender__days__days">{{"v" | uppercase}}</span>
+                <span class="calender__days__days">{{"s" | uppercase}}</span>
             </article>
 
 <!-- number of cal -->
