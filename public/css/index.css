@@ -2,8 +2,16 @@ body{
   margin: 0;
   display: flex;
   justify-content: center;
+  animation: blurs .8s linear;
+  transition: 1s;
 }
 
+@keyframes blurs {
+  to{
+    transition: 1s;
+    filter:blur(4px);
+  }
+}
 .calender__container{
   display: flex;
   padding: 0 2em 2em;
@@ -18,13 +26,17 @@ body{
   font-family: arial;
   color: red;
 }
-
+.title__year{
+  font-size: 18px;
+  color: blue;
+  font-style: italic;
+}
 .calender__days{
   font-weight: 600;
   font-family: sans-serif;
   display: grid;
   grid-auto-flow: column;
-  /* justify-content: space-around; */
+  border-radius: 5px;
   margin-bottom: 1em;
   margin-top: 1em;
   border-bottom: 1px solid #ccc;
@@ -60,10 +72,20 @@ body{
   border-radius: 50%;
   color: #eee;
 }
+.calender__days__days:hover{
+  transition: .3s;
+  cursor:pointer;
+  transform: scale(1.5) translateY(-10px);
+  border-radius: 5%;
+}
+
 .calender__number{
     align-items: center;
     justify-items: center;
     display: grid;
+    background-color: #eee;
+    padding-top: .5em;
+    border-radius: 5px;
     grid-auto-flow: row;
     grid-template-rows: 30px 30px 30px 30px;
     grid-template-columns: 35px 35px 35px 35px 35px 35px 35px;
