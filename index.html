@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr" ng-app>
+<html lang="es" dir="ltr" ng-app="calender">
   <head>
     <meta charset="utf-8">
     <title>{{"Calender" | uppercase}}</title>
@@ -8,6 +8,7 @@
   <body>
 
   <script type="text/javascript" src="public/js/lib/angularjs/angular.min.js"></script>
+  <script type="text/javascript" src="public/js/main.js"></script>
 
     <div class="calender__container">
 
@@ -16,49 +17,16 @@
             <h1 class="container__title">{{"September " | lowercase}}<span class="title__year">{{2019}}</span></h1>
         </div>
 <!-- name of day calender -->
-        <section class="calender">
-            <article class="calender__days">
-                <span class="calender__days__days">{{"d" | uppercase}}</span>
-                <span class="calender__days__days">{{"l" | uppercase}}</span>
-                <span class="calender__days__days">{{"m" | uppercase}}</span>
-                <span class="calender__days__days">{{"m" | uppercase}}</span>
-                <span class="calender__days__days">{{"j" | uppercase}}</span>
-                <span class="calender__days__days">{{"v" | uppercase}}</span>
-                <span class="calender__days__days">{{"s" | uppercase}}</span>
+        <section class="calender" >
+            <article class="calender__days" ng-controller="day as d">
+                <span class="calender__days__days" ng-repeat="dayss in days track by $index">{{dayss | uppercase}}</span>
+                 
             </article>
 
 <!-- number of cal -->
-            <article class="calender__number">
-                <span class="calender__days__number">{{01}}</span>
-                <span class="calender__days__number">{{02}}</span>
-                <span class="calender__days__number">{{03}}</span>
-                <span class="calender__days__number">{{04}}</span>
-                <span class="calender__days__number">{{05}}</span>
-                <span class="calender__days__number">{{06}}</span>
-                <span class="calender__days__number">{{07}}</span>
-                <span class="calender__days__number">{{08}}</span>
-                <span class="calender__days__number">{{09}}</span>
-                <span class="calender__days__number">{{10}}</span>
-                <span class="calender__days__number">{{11}}</span>
-                <span class="calender__days__number">{{12}}</span>
-                <span class="calender__days__number">{{13}}</span>
-                <span class="calender__days__number">{{14}}</span>
-                <span class="calender__days__number">{{15}}</span>
-                <span class="calender__days__number">{{16}}</span>
-                <span class="calender__days__number">{{17}}</span>
-                <span class="calender__days__number">{{18}}</span>
-                <span class="calender__days__number">{{19}}</span>
-                <span class="calender__days__number">{{20}}</span>
-                <span class="calender__days__number">{{21}}</span>
-                <span class="calender__days__number">{{22}}</span>
-                <span class="calender__days__number">{{23}}</span>
-                <span class="calender__days__number">{{24}}</span>
-                <span class="calender__days__number">{{25}}</span>
-                <span class="calender__days__number">{{26}}</span>
-                <span class="calender__days__number">{{27}}</span>
-                <span class="calender__days__number">{{28}}</span>
-                <span class="calender__days__number">{{29}}</span>
-                <span class="calender__days__number">{{30}}</span>
+            <article class="calender__number" ng-controller="numberDay as numberD">
+                <span class="calender__days__number" ng-repeat="num in numberDays track by $index">{{num|number}}</span>
+               
             </article>
 
         </section>
